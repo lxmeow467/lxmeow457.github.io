@@ -20,49 +20,49 @@ const openings = [
         name: 'Вариант Найдорфа',
         moves: '1.e4 c5 2.Nf3 d6 3.d4 cxd4 4.Nxd4 Nf6 5.Nc3 a6',
         description: 'Один из самых популярных и теоретически нагруженных вариантов Сицилианской защиты. Ход a6 готовит продвижение b5 и развитие слона на b7.',
-        url: '/openings/variations sicilian/najdorf.html'
+        url: '/openings/variations-sicilian/najdorf.html'
       },
       {
         name: 'Вариант Дракона',
         moves: '1.e4 c5 2.Nf3 d6 3.d4 cxd4 4.Nxd4 Nf6 5.Nc3 g6',
         description: 'Агрессивный вариант, где черные фианкеттируют слона на g7, создавая мощную диагональ h8-a1, напоминающую дракона.',
-        url: '/openings/variations sicilian/dragon.html'
+        url: '/openings/variations-sicilian/dragon.html'
       },
       {
         name: 'Московский вариант',
         moves: '1.e4 c5 2.Nf3 d6 3.Bb5+',
         description: 'Альтернативный вариант, где белые развивают слона на b5 с шахом, создавая угрозу и вынуждая защитную реакцию черных.',
-        url: '/openings/variations sicilian/moscowskiy.html'
+        url: '/openings/variations-sicilian/moscowskiy.html'
       },
       {
         name: 'Классический вариант',
         moves: '1.e4 c5 2.Nf3 Nc6 3.d4 cxd4 4.Nxd4 Nf6 5.Nc3 d6',
         description: 'Солидное продолжение с развитием фигур и борьбой в центре.',
-        url: '/openings/variations sicilian/sicilian_classical.html'
+        url: '/openings/variations-sicilian/sicilian_classical.html'
       },
       {
         name: 'Челябинский вариант',
         moves: '1.e4 c5 2.Nf3 Nc6 3.d4 cxd4 4.Nxd4 Nf6 5.Nc3 e5',
         description: 'Агрессивный вариант, где черные немедленно контратакуют в центре с ходом e5.',
-        url: '/openings/variations sicilian/sicilian_scheveningen.html'
+        url: '/openings/variations-sicilian/sicilian_scheveningen.html'
       },
       {
         name: 'Вариант Паульсена',
         moves: '1.e4 c5 2.Nf3 e6 3.d4 cxd4 4.Nxd4 a6',
         description: 'Позиционный вариант, где черные откладывают развитие коня на f6 и готовят продвижение b5.',
-        url: '/openings/variations sicilian/sicilian_paulsen.html'
+        url: '/openings/variations-sicilian/sicilian_paulsen.html'
       },
       {
         name: 'Ранний Дракон',
         moves: '1.e4 c5 2.Nf3 Nc6 3.d4 cxd4 4.Nxd4 g6',
         description: 'Упрощенная версия варианта Дракона, где черные сразу начинают фианкеттирование слона.',
-        url: '/openings/variations sicilian/sicilian_early_dragon.html'
+        url: '/openings/variations-sicilian/sicilian_early_dragon.html'
       },
       {
         name: 'Вариант Россолимо',
         moves: '1.e4 c5 2.Nf3 Nc6 3.Bb5',
         description: 'Альтернатива основным линиям Сицилианской защиты, где белые развивают слона на b5, атакуя коня на c6.',
-        url: '/openings/variations sicilian/sicilian_rossolimo.html'
+        url: '/openings/variations-sicilian/sicilian_rossolimo.html'
       }
       ],
       games: [
@@ -244,204 +244,7 @@ const openings = [
         }
       ],
       lichessBoardUrl: 'https://lichess.org/study/embed/XtFCFYlM/GCUTf1EY'
-    },
-    {
-      id: 4,
-      name: 'Английское начало',
-      description: 'Гибкий фланговый дебют, позволяющий белым избежать наиболее изученных продолжений.',
-      moves: '1.c4',
-      popularity: 'Высокая',
-      style: 'Позиционный',
-      position: 'Закрытая',
-      risk: 'Низкий',
-      color: 'Белые',
-      level: 'Средний',
-      timeRequired: 'Умеренно',
-      history: 'Английское начало названо в честь английского шахматиста Говарда Стаунтона, который популяризировал этот дебют в 19 веке. Однако широкое распространение дебют получил только в 20 веке, особенно после его использования Михаилом Ботвинником и Анатолием Карповым.',
-      ideas: 'Основная идея Английского начала - контроль центра сбоку, не занимая его пешками напрямую. Белые часто переходят к системам, похожим на Сицилианскую защиту с обратными цветами. Дебют отличается гибкостью и позволяет белым избежать многих подготовленных вариантов черных против 1.e4 или 1.d4.',
-      variations: [
-        {
-          name: 'Симметричный вариант',
-          moves: '1.c4 c5',
-          description: 'Основной вариант, где черные создают симметричную пешечную структуру и готовятся к долгой позиционной борьбе.'
-        },
-        {
-          name: 'Обратная Сицилианская защита',
-          moves: '1.c4 e5',
-          description: 'Белые играют c4, а черные отвечают e5, создавая позицию, похожую на Сицилианскую защиту с обратными цветами.'
-        },
-        {
-          name: 'Вариант с 2.g3',
-          moves: '1.c4 Nf6 2.g3',
-          description: 'Белые фианкеттируют слона на g2, создавая прочную позицию и готовясь к атаке на королевском фланге.'
-        }
-      ],
-      games: [
-        {
-          white: 'Анатолий Карпов',
-          black: 'Гарри Каспаров',
-          year: '1984',
-          result: '1/2-1/2',
-          link: 'https://www.chessgames.com/perl/chessgame?gid=1067252'
-        },
-        {
-          white: 'Магнус Карлсен',
-          black: 'Вишванатан Ананд',
-          year: '2014',
-          result: '1-0',
-          link: 'https://www.chessgames.com/perl/chessgame?gid=1761429'
-        }
-      ],
-      lichessBoardUrl: 'https://lichess.org/study/embed/XtFCFYlM/GCUTf1EY'
-    },
-    {
-      id: 5,
-      name: 'Испанская партия',
-      description: 'Один из самых популярных дебютов, создающий сложную стратегическую борьбу с множеством вариантов.',
-      moves: '1.e4 e5 2.Nf3 Nc6 3.Bb5',
-      popularity: 'Очень высокая',
-      style: 'Универсальный',
-      position: 'Нейтральная',
-      risk: 'Средний',
-      color: 'Белые',
-      level: 'Средний',
-      timeRequired: 'Много',
-      history: 'Испанская партия названа в честь испанского священника Руя Лопеса де Сегуры, который анализировал этот дебют в своей книге 1561 года. Это один из старейших и наиболее изученных дебютов в шахматах, который до сих пор регулярно встречается на самом высоком уровне.',
-      ideas: 'Основная идея Испанской партии - давление на коня c6, который защищает пешку e5. Белые создают угрозу выиграть пешку e5 и стремятся к длительному позиционному преимуществу. Черные имеют множество способов защиты, что привело к возникновению огромного количества вариантов и подвариантов.',
-      variations: [
-        {
-          name: 'Закрытый вариант',
-          moves: '1.e4 e5 2.Nf3 Nc6 3.Bb5 a6 4.Ba4 Nf6 5.0-0 Be7',
-          description: 'Классический вариант, где черные создают солидную позицию и готовятся к длительной борьбе.'
-        },
-        {
-          name: 'Открытый вариант',
-          moves: '1.e4 e5 2.Nf3 Nc6 3.Bb5 a6 4.Ba4 Nf6 5.0-0 Nxe4',
-          description: 'Острый вариант, где черные жертвуют пешку за активную игру и атаку.'
-        },
-        {
-          name: 'Вариант Маршалла',
-          moves: '1.e4 e5 2.Nf3 Nc6 3.Bb5 a6 4.Ba4 Nf6 5.0-0 Be7 6.Re1 b5 7.Bb3 0-0 8.c3 d5',
-          description: 'Агрессивный гамбит, названный в честь американского шахматиста Фрэнка Маршалла, где черные жертвуют пешку за сильную атаку.'
-        }
-      ],
-      games: [
-        {
-          white: 'Гарри Каспаров',
-          black: 'Найджел Шорт',
-          year: '1993',
-          result: '1-0',
-          link: 'https://www.chessgames.com/perl/chessgame?gid=1070167'
-        },
-        {
-          white: 'Магнус Карлсен',
-          black: 'Фабиано Каруана',
-          year: '2018',
-          result: '1/2-1/2',
-          link: 'https://www.chessgames.com/perl/chessgame?gid=1933354'
-        }
-      ],
-      lichessBoardUrl: 'https://lichess.org/study/embed/XtFCFYlM/GCUTf1EY'
-    },
-    {
-      id: 6,
-      name: 'Защита Нимцовича',
-      description: 'Гипермодернистский дебют, где черные оказывают давление на центр фигурами, не занимая его пешками сразу.',
-      moves: '1.d4 Nf6 2.c4 e6 3.Nc3 Bb4',
-      popularity: 'Высокая',
-      style: 'Позиционный',
-      position: 'Закрытая',
-      risk: 'Средний',
-      color: 'Черные',
-      level: 'Продвинутый',
-      timeRequired: 'Много',
-      history: 'Защита Нимцовича названа в честь датского шахматиста Арона Нимцовича, который популяризировал этот дебют в начале 20 века. Он стал одним из ключевых дебютов в гипермодернистской шахматной теории.',
-      ideas: 'Основная идея Защиты Нимцовича - связать коня на c3 и контролировать центр с помощью фигур, а не пешек. Черные создают давление на d4, ищут контригру на ферзевом фланге и избегают раннего размена пешек. Дебют ведет к сложным позициям с богатыми стратегическими возможностями.',
-      variations: [
-        {
-          name: 'Классический вариант',
-          moves: '1.d4 Nf6 2.c4 e6 3.Nc3 Bb4 4.e3',
-          description: 'Солидный вариант, где белые укрепляют центр и готовятся к длительной позиционной борьбе.'
-        },
-        {
-          name: 'Вариант Рубинштейна',
-          moves: '1.d4 Nf6 2.c4 e6 3.Nc3 Bb4 4.e3 0-0 5.Bd3 d5 6.Nf3 c5 7.0-0 dxc4 8.Bxc4',
-          description: 'Классический вариант, названный в честь Акибы Рубинштейна, где белые стремятся к активной игре в центре.'
-        },
-        {
-          name: 'Вариант Каспарова',
-          moves: '1.d4 Nf6 2.c4 e6 3.Nc3 Bb4 4.Nf3 0-0 5.Bg5',
-          description: 'Агрессивный вариант, популяризированный Гарри Каспаровым, где белые быстро развивают фигуры и создают угрозы.'
-        }
-      ],
-      games: [
-        {
-          white: 'Гарри Каспаров',
-          black: 'Анатолий Карпов',
-          year: '1985',
-          result: '1-0',
-          link: 'https://www.chessgames.com/perl/chessgame?gid=1067317'
-        },
-        {
-          white: 'Магнус Карлсен',
-          black: 'Вишванатан Ананд',
-          year: '2014',
-          result: '1-0',
-          link: 'https://www.chessgames.com/perl/chessgame?gid=1761430'
-        }
-      ],
-      lichessBoardUrl: 'https://lichess.org/study/embed/XtFCFYlM/GCUTf1EY'
-  },
-  {
-    id: 7,
-    name: 'Ферзевый гамбит',
-    description: 'Классический дебют, где белые жертвуют пешку для быстрого развития и контроля центра.',
-    moves: '1.d4 d5 2.c4',
-    popularity: 'Высокая',
-      style: 'Универсальный',
-      position: 'Нейтральная',
-      risk: 'Средний',
-      color: 'Белые',
-      level: 'Средний',
-      timeRequired: 'Умеренно',
-    category: 'закрытый',
-    history: 'Ферзевый гамбит - один из старейших дебютов, известный еще с 15 века. Он стал особенно популярен в начале 20 века благодаря матчам за звание чемпиона мира между Ласкером и Капабланкой. В современной практике это один из основных способов борьбы белых против 1...d5.',
-    ideas: 'Основная идея ферзевого гамбита - пожертвовать пешку c4 для быстрого развития фигур и контроля центра. Белые стремятся к активной фигурной игре и давлению на позицию черных. В большинстве случаев черные возвращают пешку, но получают равную игру.',
-    variations: [
-      {
-          name: 'Принятый Ферзевый гамбит',
-          moves: '1.d4 d5 2.c4 dxc4',
-          description: 'Черные принимают жертву пешки, но должны быть готовы к активной игре белых и давлению на пешку c4.'
-        },
-        {
-          name: 'Отказанный Ферзевый гамбит',
-          moves: '1.d4 d5 2.c4 e6',
-          description: 'Классический отказ, где черные укрепляют пешку d5 и готовятся к солидной игре.'
-      },
-      {
-        name: 'Славянская защита',
-          moves: '1.d4 d5 2.c4 c6',
-          description: 'Популярный ответ, где черные защищают пешку d5 и готовятся к контригре в центре.'
-        }
-      ],
-      games: [
-        {
-          white: 'Хосе Рауль Капабланка',
-          black: 'Эмануил Ласкер',
-          year: '1921',
-          result: '1-0',
-          link: 'https://www.chessgames.com/perl/chessgame?gid=1241487'
-        },
-        {
-          white: 'Магнус Карлсен',
-          black: 'Фабиано Каруана',
-          year: '2018',
-          result: '1-0',
-          link: 'https://www.chessgames.com/perl/chessgame?gid=1937926'
-        }
-      ],
-      lichessBoardUrl: 'https://lichess.org/analysis'
-  }
+    }
 ];
 
 // Делаем массив доступным глобально
@@ -515,7 +318,7 @@ function initializeOpenings() {
         }
         // Проверяем наличие URL для варианта и переходим по нему
         if (opening.id === 0) { // Для Сицилианской защиты переходим на страницу деталей
-          window.location.href = `openings/variations sicilian/opening-detail.html`;
+          window.location.href = `openings/variations-sicilian/opening-detail.html`;
         } else if (opening.id === 1) { // Для Защиты Каро-Канн переходим на специальную страницу
           window.location.href = `openings/caro-kann/opening-detail.html`;
         } else if (opening.variations && opening.variations.length > 0 && opening.variations[0].url) {
