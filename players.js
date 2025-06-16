@@ -126,76 +126,63 @@ const players = [
     tournaments: 'Чемпион мира ФИДЕ (2000), Чемпион мира (2007, 2008, 2010, 2012), Tata Steel/Wijk aan Zee (1989, 1998, 2003, 2004, 2006), Linares (1998, 2007, 2008), Dortmund (1996, 2000, 2004), Melody Amber (1994, 1997, 2003, 2005, 2006), Grenke Chess Classic (2013, 2014), Bilbao Masters (2012), Moscow Tal Memorial (2011), Corsica Masters (2005, 2006). World Rapid Champion (2003, 2017), World Blitz Champion (2000, 2017), Norway Chess Blitz (2019), Leon Masters (2005, 2007, 2008, 2009, 2011). Чемпион Индии (1986, 1987, 1988, 1991, 2000), Олимпиада (2014 – серебро в составе Индии), Asian Team Championship (2003, 2005).',
     style: 'Универсальный стиль с акцентом на быстроту принятия решений и интуитивное понимание позиции. Отличается скоростью расчета и способностью быстро адаптироваться к различным типам позиций. Ананд одинаково силён в тактических осложнениях и позиционной игре, мастерски переключаясь между агрессией и техникой. Его игра в быстрых шахматах (особенно в рапиде и блице) стала эталоном благодаря интуитивным жертвам и скорости принятия решений.'
   },
-  {
-    name: 'Уэсли Со',
-    title: 'Гроссмейстер',
-    rating: 2760,
-    country: 'США',
-    bestOpening: 'Английское начало',
-    fideId: '5202213',
-    rsfId: null,
-    photoUrl: 'images/placeholder.jpg',
-    bio: 'Уэсли Со - американский шахматист филиппинского происхождения. Отличается точной позиционной игрой и глубоким стратегическим пониманием. Один из сильнейших шахматистов современности.',
-    achievements: 'Чемпион США (2017, 2020, 2021), чемпион мира по шахматам Фишера, победитель Grand Chess Tour.',
-    tournaments: 'Sinquefield Cup, Tata Steel, Norway Chess, US Championship.',
-    style: 'Позиционный стиль с акцентом на точность и минимизацию ошибок. Сильная дебютная подготовка и отличное понимание эндшпиля.'
-  },
-  {
-    name: 'Левон Аронян',
-    title: 'Гроссмейстер',
-    rating: 2735,
-    country: 'Армения/США',
-    bestOpening: 'Испанская партия',
-    fideId: '13300474',
-    rsfId: null,
-    photoUrl: 'images/placeholder.jpg',
-    bio: 'Левон Аронян - армянский шахматист, выступающий за США. Известен своим креативным подходом к игре и способностью находить нестандартные идеи. Один из самых ярких и творческих шахматистов современности.',
-    achievements: 'Победитель Кубка мира ФИДЕ (2005, 2017), многократный победитель командных чемпионатов мира в составе сборной Армении.',
-    tournaments: 'Norway Chess, Sinquefield Cup, Вейк-ан-Зее, Мемориал Таля.',
-    style: 'Креативный, атакующий стиль с акцентом на сложную игру и нестандартные решения. Отличное тактическое зрение и глубокое стратегическое понимание.'
-  },
-  {
-    name: 'Максим Вашье-Лаграв',
-    title: 'Гроссмейстер',
-    rating: 2760,
-    country: 'Франция',
-    bestOpening: 'Сицилианская защита',
-    fideId: '623539',
-    rsfId: null,
-    photoUrl: 'images/placeholder.jpg',
-    bio: 'Максим Вашье-Лаграв - французский шахматист, один из сильнейших игроков мира. Известен своей универсальной игрой и способностью играть на высоком уровне в различных стилях.',
-    achievements: 'Победитель турнира претендентов 2022, участник матча на первенство мира.',
-    tournaments: 'Sinquefield Cup, London Chess Classic, Вейк-ан-Зее.',
-    style: 'Универсальный стиль с акцентом на точность и минимизацию ошибок.'
-  },
-  {
-    name: 'Шахрияр Мамедьяров',
-    title: 'Гроссмейстер',
-    rating: 2757,
-    country: 'Азербайджан',
-    bestOpening: 'Сицилианская защита',
-    fideId: '13401319',
-    rsfId: null,
-    photoUrl: 'images/placeholder.jpg',
-    bio: 'Шахрияр Мамедьяров - азербайджанский шахматист, один из сильнейших игроков мира. Известен своей агрессивной игрой и способностью находить нестандартные решения.',
-    achievements: 'Победитель турнира претендентов 2019, участник матча на первенство мира.',
-    tournaments: 'Norway Chess, Sinquefield Cup, Вейк-ан-Зее.',
-    style: 'Агрессивный, креативный стиль с акцентом на сложную игру и нестандартные решения.'
-  },
-  {
-    name: 'Александр Грищук',
-    title: 'Гроссмейстер',
-    rating: 2742,
-    country: 'Россия',
-    bestOpening: 'Сицилианская защита',
-    fideId: '4126025',
-    rsfId: '3416025',
-    photoUrl: 'images/placeholder.jpg',
-    bio: 'Александр Грищук - российский шахматист, один из сильнейших игроков мира. Известен своей универсальной игрой и способностью играть на высоком уровне в различных стилях.',
-    achievements: 'Победитель Кубка мира ФИДЕ (2000, 2006), участник матча на первенство мира.',
-    tournaments: 'Norway Chess, Sinquefield Cup, Вейк-ан-Зее.',
-    style: 'Универсальный стиль с акцентом на точность и минимизацию ошибок.'
-  }
 ];
 
 // Инициализация страницы с оптимизацией производительности
+document.addEventListener('DOMContentLoaded', () => {
+  console.log('DOM полностью загружен, вызываем displayPlayers()');
+  displayPlayers();
+});
+
+// Функция для динамического отображения шахматистов
+function displayPlayers() {
+  console.log('Функция displayPlayers() вызвана');
+  const playersGrid = document.getElementById('playersGrid');
+  if (!playersGrid) {
+    console.error('Элемент #playersGrid не найден!');
+    return;
+  }
+
+  playersGrid.innerHTML = ''; // Очищаем контейнер перед добавлением
+
+  if (players && players.length > 0) {
+    console.log('Найдено игроков:', players.length);
+    players.forEach((player, index) => {
+      const playerCard = document.createElement('div');
+      playerCard.classList.add('player-card');
+      playerCard.innerHTML = `
+        <div class="player-card-header">
+          <div class="player-thumbnail-wrapper">
+            <img src="${player.photoUrl}" alt="${player.name}" class="player-thumbnail" onerror="this.src='images/placeholder.jpg'">
+          </div>
+          <div class="player-card-info">
+            <h3>${player.name}</h3>
+            <p class="player-title">${player.title}</p>
+            <p class="player-rating">Рейтинг: ${player.rating}</p>
+            <p class="player-country">${player.country}</p>
+          </div>
+        </div>
+        <div class="player-card-bio">
+          <p>${player.bio}</p>
+          <div class="card-actions">
+            <a href="players/player-detail.html?id=${index}" class="read-more-btn">
+              Подробнее <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      `;
+      playerCard.addEventListener('click', function(event) {
+        // Если клик был по ссылке "Подробнее", то переходим по ссылке
+        if (event.target.closest('.read-more-btn')) {
+          return;
+        }
+        // В противном случае, переходим на страницу деталей игрока
+        window.location.href = `players/player-detail.html?id=${index}`;
+      });
+      playersGrid.appendChild(playerCard);
+    });
+  } else {
+    console.warn('Массив players пуст или не определен.');
+    playersGrid.innerHTML = '<p>Нет данных о шахматистах для отображения.</p>';
+  }
+}
