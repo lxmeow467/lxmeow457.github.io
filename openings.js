@@ -20,49 +20,49 @@ const openings = [
         name: 'Вариант Найдорфа',
         moves: '1.e4 c5 2.Nf3 d6 3.d4 cxd4 4.Nxd4 Nf6 5.Nc3 a6',
         description: 'Один из самых популярных и теоретически нагруженных вариантов Сицилианской защиты. Ход a6 готовит продвижение b5 и развитие слона на b7.',
-        url: '/openings/variations-sicilian/najdorf.html'
+        url: 'openings/variations-sicilian/najdorf.html'
       },
       {
         name: 'Вариант Дракона',
         moves: '1.e4 c5 2.Nf3 d6 3.d4 cxd4 4.Nxd4 Nf6 5.Nc3 g6',
         description: 'Агрессивный вариант, где черные фианкеттируют слона на g7, создавая мощную диагональ h8-a1, напоминающую дракона.',
-        url: '/openings/variations-sicilian/dragon.html'
+        url: 'openings/variations-sicilian/dragon.html'
       },
       {
         name: 'Московский вариант',
         moves: '1.e4 c5 2.Nf3 d6 3.Bb5+',
         description: 'Альтернативный вариант, где белые развивают слона на b5 с шахом, создавая угрозу и вынуждая защитную реакцию черных.',
-        url: '/openings/variations-sicilian/moscowskiy.html'
+        url: 'openings/variations-sicilian/moscowskiy.html'
       },
       {
         name: 'Классический вариант',
         moves: '1.e4 c5 2.Nf3 Nc6 3.d4 cxd4 4.Nxd4 Nf6 5.Nc3 d6',
         description: 'Солидное продолжение с развитием фигур и борьбой в центре.',
-        url: '/openings/variations-sicilian/sicilian_classical.html'
+        url: 'openings/variations-sicilian/sicilian_classical.html'
       },
       {
         name: 'Челябинский вариант',
         moves: '1.e4 c5 2.Nf3 Nc6 3.d4 cxd4 4.Nxd4 Nf6 5.Nc3 e5',
         description: 'Агрессивный вариант, где черные немедленно контратакуют в центре с ходом e5.',
-        url: '/openings/variations-sicilian/sicilian_scheveningen.html'
+        url: 'openings/variations-sicilian/sicilian_scheveningen.html'
       },
       {
         name: 'Вариант Паульсена',
         moves: '1.e4 c5 2.Nf3 e6 3.d4 cxd4 4.Nxd4 a6',
         description: 'Позиционный вариант, где черные откладывают развитие коня на f6 и готовят продвижение b5.',
-        url: '/openings/variations-sicilian/sicilian_paulsen.html'
+        url: 'openings/variations-sicilian/sicilian_paulsen.html'
       },
       {
         name: 'Ранний Дракон',
         moves: '1.e4 c5 2.Nf3 Nc6 3.d4 cxd4 4.Nxd4 g6',
         description: 'Упрощенная версия варианта Дракона, где черные сразу начинают фианкеттирование слона.',
-        url: '/openings/variations-sicilian/sicilian_early_dragon.html'
+        url: 'openings/variations-sicilian/sicilian_early_dragon.html'
       },
       {
         name: 'Вариант Россолимо',
         moves: '1.e4 c5 2.Nf3 Nc6 3.Bb5',
         description: 'Альтернатива основным линиям Сицилианской защиты, где белые развивают слона на b5, атакуя коня на c6.',
-        url: '/openings/variations-sicilian/sicilian_rossolimo.html'
+        url: 'openings/variations-sicilian/sicilian_rossolimo.html'
       }
       ],
       games: [
@@ -71,7 +71,7 @@ const openings = [
           black: 'Вишванатан Ананд',
           year: '1995',
           result: '1-0',
-          link: 'https://www.chessgames.com/perl/chessgame?gid=1018574'
+          link: 'image.pnghttps://www.chessgames.com/perl/chessgame?gid=1018574'
         },
         {
           white: 'Бобби Фишер',

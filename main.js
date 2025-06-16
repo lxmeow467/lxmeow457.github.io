@@ -324,6 +324,16 @@ function setupSmoothScrolling() {
 // Настройка мобильной навигации
 function setupMobileNavigation() {
   const mobileNavItems = document.querySelectorAll('.mobile-nav-item');
+  const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+  const mobileNav = document.getElementById('mobileNav');
+
+  if (mobileMenuToggle && mobileNav) {
+    mobileMenuToggle.addEventListener('click', () => {
+      mobileNav.classList.toggle('active');
+      mobileMenuToggle.querySelector('i').classList.toggle('fa-bars');
+      mobileMenuToggle.querySelector('i').classList.toggle('fa-times');
+    });
+  }
   
   // Обработка кликов по элементам мобильной навигации
   mobileNavItems.forEach(item => {

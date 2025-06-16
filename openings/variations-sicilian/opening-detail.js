@@ -48,9 +48,11 @@ document.addEventListener('DOMContentLoaded', () => {
             
             // Проверяем, есть ли URL для варианта
             if (variation.url) {
+                // Убедимся, что URL является относительным для GitHub Pages
+                const relativeUrl = variation.url.startsWith('/') ? variation.url.substring(1) : variation.url;
                 // Если есть URL, делаем заголовок кликабельным
                 variationItem.innerHTML = `
-                    <a href="${variation.url}">${variation.name}</a> - 
+                    <a href="${relativeUrl}">${variation.name}</a> - 
                     <span class="notation">${variation.moves}</span>
                 `;
             } else {
