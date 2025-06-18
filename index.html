@@ -184,7 +184,7 @@
     
     <!-- Добавляем мобильную навигацию внизу экрана -->
     <nav class="mobile-nav">
-      <a href="index.html" class="mobile-nav-item active">
+      <a href="index.html" class="mobile-nav-item">
         <i class="fas fa-info-circle mobile-nav-icon"></i>
       </a>
       <a href="rules.html" class="mobile-nav-item"><i class="fas fa-scroll mobile-nav-icon"></i></a>
@@ -203,44 +203,32 @@
       <a href="tournaments.html" class="mobile-nav-item">
         <i class="fas fa-trophy mobile-nav-icon"></i>
       </a>
-      <a href="news.html" class="mobile-nav-item">
-        <i class="fas fa-newspaper mobile-nav-icon"></i>
-      </a>
     </nav>
 
     <script async defer src="/main.js"></script>
     <script>
       // Активация текущего пункта мобильной навигации
       document.addEventListener('DOMContentLoaded', function() {
-        // Получаем текущий путь
         const currentPath = window.location.pathname;
-        const currentHash = window.location.hash;
-        
-        // Находим все пункты мобильной навигации
         const mobileNavItems = document.querySelectorAll('.mobile-nav-item');
-        
-        // Перебираем их и устанавливаем активный класс
         mobileNavItems.forEach(item => {
           const href = item.getAttribute('href');
-          // Проверяем совпадение URL или хэша
-          if (href === currentPath || (currentHash && href === currentHash)) {
+          // Для раздела дебютов активируем пункт openings.html и его подстраницы
+          if (
+            (href === 'openings.html' && (currentPath.includes('openings') || currentPath.includes('opening-detail'))) ||
+            (href === 'ratings.html' && currentPath.includes('ratings')) ||
+            (href === 'players.html' && currentPath.includes('players')) ||
+            (href === 'tournaments.html' && currentPath.includes('tournaments')) ||
+            (href === 'rules.html' && currentPath.includes('rules')) ||
+            (href === 'learning.html' && currentPath.includes('learning')) ||
+            (href === 'index.html' && (currentPath.endsWith('index.html') || currentPath === '/' || currentPath === ''))
+          ) {
             item.classList.add('active');
-          } else if (currentPath.includes('openings') && href === 'openings.html') {
-            item.classList.add('active');
-          } else if (currentPath.includes('ratings') && href === 'ratings.html') {
-            item.classList.add('active');
-          } else if (currentPath.includes('players') && href === 'players.html') {
-            item.classList.add('active');
-          } else if (currentPath.includes('tournaments') && href === 'tournaments.html') {
-            item.classList.add('active');
-          } else if (currentPath.includes('rules') && href === 'rules.html') {
-             item.classList.add('active');
           } else {
             item.classList.remove('active');
           }
         });
       });
-
       // Принудительная прокрутка в начало страницы при загрузке
       window.addEventListener('load', function() {
         window.scrollTo(0, 0);
