@@ -13,4 +13,4 @@ if __name__ == '__main__':
     server_address = ('', port)
     httpd = HTTPServer(server_address, CORSRequestHandler)
     print(f'Сервер запущен на порту {port}')
-    httpd.serve_forever() 
+    httpd.serve_forever()   
