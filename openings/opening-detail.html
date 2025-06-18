@@ -1,4 +1,4 @@
-    <!-- Добавляем мобильную навигацию внизу экрана -->
+    </footer>
     <nav class="mobile-nav">
       <a href="index.html" class="mobile-nav-item">
         <i class="fas fa-info-circle mobile-nav-icon"></i>
@@ -20,28 +20,30 @@
         <i class="fas fa-trophy mobile-nav-icon"></i>
       </a>
     </nav>
+  </body>
+</html>
 
-    <script>
-      // Активация текущего пункта мобильной навигации
-      document.addEventListener('DOMContentLoaded', function() {
-        const currentPath = window.location.pathname;
-        const mobileNavItems = document.querySelectorAll('.mobile-nav-item');
-        mobileNavItems.forEach(item => {
-          const href = item.getAttribute('href');
-          // Для раздела дебютов активируем пункт openings.html и его подстраницы
-          if (
-            (href === 'openings.html' && (currentPath.includes('openings') || currentPath.includes('opening-detail'))) ||
-            (href === 'ratings.html' && currentPath.includes('ratings')) ||
-            (href === 'players.html' && currentPath.includes('players')) ||
-            (href === 'tournaments.html' && currentPath.includes('tournaments')) ||
-            (href === 'rules.html' && currentPath.includes('rules')) ||
-            (href === 'learning.html' && currentPath.includes('learning')) ||
-            (href === 'index.html' && (currentPath.endsWith('index.html') || currentPath === '/' || currentPath === ''))
-          ) {
-            item.classList.add('active');
-          } else {
-            item.classList.remove('active');
-          }
-        });
-      });
-    </script> 
+<script>
+  // Активация текущего пункта мобильной навигации
+  document.addEventListener('DOMContentLoaded', function() {
+    const currentPath = window.location.pathname;
+    const mobileNavItems = document.querySelectorAll('.mobile-nav-item');
+    mobileNavItems.forEach(item => {
+      const href = item.getAttribute('href');
+      // Для раздела дебютов активируем пункт openings.html и его подстраницы
+      if (
+        (href === 'openings.html' && (currentPath.includes('openings') || currentPath.includes('opening-detail'))) ||
+        (href === 'ratings.html' && currentPath.includes('ratings')) ||
+        (href === 'players.html' && currentPath.includes('players')) ||
+        (href === 'tournaments.html' && currentPath.includes('tournaments')) ||
+        (href === 'rules.html' && currentPath.includes('rules')) ||
+        (href === 'learning.html' && currentPath.includes('learning')) ||
+        (href === 'index.html' && (currentPath.endsWith('index.html') || currentPath === '/' || currentPath === ''))
+      ) {
+        item.classList.add('active');
+      } else {
+        item.classList.remove('active');
+      }
+    });
+  });
+</script> 
