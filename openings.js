@@ -449,25 +449,31 @@ function findRecommendedOpenings(preferences) {
   // Создаем систему оценки для каждого дебюта
   const scoredOpenings = window.openings.map(opening => {
     let score = 0;
-
-    // Оцениваем соответствие по каждому критерию
     if (opening.position === preferences.position) score += 2;
     if (opening.style === preferences.style) score += 3;
     if (opening.timeRequired === preferences.timeRequired) score += 1;
     if (opening.risk === preferences.risk) score += 2;
     if (opening.level === preferences.level) score += 2;
     if (opening.color === preferences.color || opening.color === 'both') score += 1;
-
     return { ...opening, score };
   });
 
-  // Находим максимальный балл среди всех дебютов
-  const maxScore = Math.max(...scoredOpenings.map(o => o.score));
+  // 1. Ищем дебюты с баллом > 5
+  let filtered = scoredOpenings.filter(o => o.score > 5);
+  if (filtered.length > 0) {
+    return filtered.sort((a, b) => b.score - a.score);
+  }
 
-  // Возвращаем все дебюты с максимальным баллом (и только если балл больше 0)
-  return scoredOpenings
-    .sort((a, b) => b.score - a.score)
-    .filter(opening => opening.score === maxScore && maxScore > 0);
+  // 2. Если нет — ищем дебюты с баллом > 0
+  filtered = scoredOpenings.filter(o => o.score > 0);
+  if (filtered.length > 0) {
+    const maxScore = Math.max(...filtered.map(o => o.score));
+    return filtered.filter(o => o.score === maxScore);
+  }
+
+  // 3. Если все дебюты с 0 баллов — возвращаем только один с максимальным баллом
+  const maxScore = Math.max(...scoredOpenings.map(o => o.score));
+  return scoredOpenings.filter(o => o.score === maxScore).slice(0, 1);
 }
 
 // Вспомогательные функции для описания стилей, рисков и уровней
