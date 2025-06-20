@@ -394,40 +394,39 @@ function initializeQuiz() {
       color
     });
 
-    // Отображаем результат
-    if (recommendedOpenings.length > 0) {
-      // Выбираем лучший дебют из списка рекомендованных
-      const bestOpening = recommendedOpenings[0];
-      
-      recommendedOpening.innerHTML = `
-        <h4>${bestOpening.name}</h4>
-        <p>${bestOpening.description}</p>
-        <p><strong>Ходы:</strong> ${bestOpening.moves}</p>
-        <p><strong>Популярность:</strong> ${bestOpening.popularity}</p>
-        <p><strong>Почему этот дебют подходит вам:</strong> Этот дебют соответствует вашим предпочтениям 
-        по стилю игры (${getStyleDescription(bestOpening.style)}), 
-        отношению к риску (${getRiskDescription(bestOpening.risk)}) 
-        и уровню подготовки (${getLevelDescription(bestOpening.level)}).</p>
-      `;
+// Отображаем результат
+if (recommendedOpenings.length > 0) {
+    // Выбираем лучший дебют из списка рекомендованных
+    const bestOpening = recommendedOpenings[0];
 
-      // Если есть другие рекомендации, показываем их тоже
-      if (recommendedOpenings.length > 1) {
+    recommendedOpening.innerHTML = `
+    <h4>${bestOpening.name}</h4>
+    <p>${bestOpening.description}</p>
+    <p><strong>Ходы:</strong> ${bestOpening.moves}</p>
+    <p><strong>Популярность:</strong> ${bestOpening.popularity}</p>
+    <p><strong>Почему этот дебют подходит вам:</strong> Этот дебют соответствует вашим предпочтениям
+    по стилю игры (${getStyleDescription(bestOpening.style)}),
+    отношению к риску (${getRiskDescription(bestOpening.risk)})
+    и уровню подготовки (${getLevelDescription(bestOpening.level)}).</p>
+    `;
+
+    // Если есть другие рекомендации, показываем их тоже
+    if (recommendedOpenings.length > 1) {
         recommendedOpening.innerHTML += `
-          <p><strong>Также стоит обратить внимание на:</strong></p>
-          <ul>
-            ${recommendedOpenings.slice(1, 3).map(opening => `
-              <li>${opening.name} - ${opening.description.substring(0, 100)}...</li>
-            `).join('')}
-          </ul>
+        <p><strong>Также стоит обратить внимание на:</strong></p>
+        <ul>
+        ${recommendedOpenings.slice(1, 3).map(opening => `
+        <li>${opening.name} - ${opening.description.substring(0, 100)}..</li>
+        `).join('')}
+        </ul>
         `;
-      }
-    } else {
-      recommendedOpening.innerHTML = `
-        <p>К сожалению, мы не смогли подобрать дебют, точно соответствующий вашим критериям. 
-        Попробуйте изменить некоторые параметры.</p>
-      `;
     }
-
+} else {
+    recommendedOpening.innerHTML = `
+    <p>К сожалению, мы не смогли подобрать дебют, точно соответствующий вашим критериям.
+    Попробуйте изменить некоторые параметры.</p>
+    `;
+}
     // Показываем результат
     quizForm.style.display = 'none';
     quizResult.style.display = 'block';
