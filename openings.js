@@ -1,5 +1,5 @@
 // Данные о дебютах
-const openings = [
+window.openings = [
   {
     id: 0,
     name: 'Сицилианская защита',
@@ -248,7 +248,7 @@ const openings = [
 ];
 
 // Делаем массив доступным глобально
-window.openings = openings;
+window.openings = window.openings;
 
 // Инициализация при загрузке DOM
 document.addEventListener('DOMContentLoaded', () => {
@@ -268,8 +268,8 @@ function initializeOpenings() {
     
     // Фильтруем дебюты по категории
     const filteredOpenings = category === 'all' 
-      ? openings 
-      : openings.filter(opening => opening.category === category);
+      ? window.openings 
+      : window.openings.filter(opening => opening.category === category);
     
     // Если нет дебютов, соответствующих фильтру
     if (filteredOpenings.length === 0) {
@@ -356,6 +356,7 @@ function initializeOpenings() {
   });
   
   // Инициализируем отображение всех дебютов при загрузке страницы
+  console.log('openings:', window.openings);
   displayOpenings();
 }
 
@@ -447,7 +448,7 @@ function initializeQuiz() {
 // Функция для поиска рекомендуемых дебютов
 function findRecommendedOpenings(preferences) {
   // Создаем систему оценки для каждого дебюта
-  const scoredOpenings = openings.map(opening => {
+  const scoredOpenings = window.openings.map(opening => {
     let score = 0;
 
     // Оцениваем соответствие по каждому критерию

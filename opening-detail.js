@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Получаем данные о Сицилианской защите из массива openings
     // Сицилианская защита имеет id 0 в массиве openings
-    const sicilianOpening = openings[0];
+    const sicilianOpening = window.openings[0];
     
     if (!sicilianOpening) {
         console.error('Данные о Сицилианской защите не найдены');

@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Находим дебют Каро-Канн в массиве дебютов
-    const caroKannOpening = openings.find(opening => opening.id === 1);
+    const caroKannOpening = window.openings.find(opening => opening.id === 1);
     
     if (!caroKannOpening) {
         console.error('Дебют Каро-Канн не найден в массиве дебютов');

@@ -277,3 +277,10 @@
 </script>
 
 <script async defer src="/main.js"></script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    if (typeof initializeOpenings === 'function') initializeOpenings();
+    if (typeof initializeQuiz === 'function') initializeQuiz();
+  });
+</script>
