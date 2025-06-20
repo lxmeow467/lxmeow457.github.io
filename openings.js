@@ -452,7 +452,7 @@ function findRecommendedOpenings(preferences) {
 
     // Оцениваем соответствие по каждому критерию
     if (opening.position === preferences.position) score += 2;
-    if (opening.style === preferences.style) score += 3; // Стиль игры - важный критерий
+    if (opening.style === preferences.style) score += 3;
     if (opening.timeRequired === preferences.timeRequired) score += 1;
     if (opening.risk === preferences.risk) score += 2;
     if (opening.level === preferences.level) score += 2;
@@ -461,10 +461,13 @@ function findRecommendedOpenings(preferences) {
     return { ...opening, score };
   });
 
-  // Сортируем дебюты по убыванию оценки
+  // Находим максимальный балл среди всех дебютов
+  const maxScore = Math.max(...scoredOpenings.map(o => o.score));
+
+  // Возвращаем все дебюты с максимальным баллом (и только если балл больше 0)
   return scoredOpenings
     .sort((a, b) => b.score - a.score)
-    .filter(opening => opening.score > 5); // Отбираем только те, которые набрали достаточно баллов
+    .filter(opening => opening.score === maxScore && maxScore > 0);
 }
 
 // Вспомогательные функции для описания стилей, рисков и уровней
